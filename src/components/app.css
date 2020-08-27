@@ -1,0 +1,9 @@
+ul li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+li:hover {
+  background-color: black;
+  color: white;
+}
