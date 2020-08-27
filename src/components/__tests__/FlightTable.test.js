@@ -10,8 +10,22 @@ beforeEach(() => {
     <FlightTable
       flightDirection='arrival'
       flightData={[
-        { callsign: 'abc', firstSeen: 1, lastSeen: 4, icao24: 'ABCD' },
-        { callsign: 'efg', firstSeen: 2, lastSeen: 3, icao24: 'EFGH' }
+        {
+          callsign: 'abc',
+          firstSeen: 1,
+          lastSeen: 4,
+          icao24: 'ABCD',
+          estDepartureAirport: 'RUZYNE',
+          estArrivalAirport: 'LeosJanacek'
+        },
+        {
+          callsign: 'efg',
+          firstSeen: 2,
+          lastSeen: 3,
+          icao24: 'EFGH',
+          estDepartureAirport: 'RUZYNE',
+          estArrivalAirport: 'LeosJanacek'
+        }
       ]}
     />
   );
