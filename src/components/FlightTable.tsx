@@ -7,7 +7,7 @@ interface Props {
 }
 
 export default ({ flightDirection, flightData }: Props) => {
-  const sortedFlightData = flightData.sort((a, b): number => {
+  const sortedFlightData = [...flightData].sort((a, b): number => {
     const sortKey = flightDirection === 'departure' ? 'firstSeen' : 'lastSeen';
 
     if (!a[sortKey]) return 1;
@@ -30,7 +30,7 @@ export default ({ flightDirection, flightData }: Props) => {
         <tbody>
           {sortedFlightData.map(({ icao24, firstSeen, callsign, lastSeen }) => {
             return (
-              <tr key={callsign + '' + firstSeen}>
+              <tr key={callsign + '_' + firstSeen}>
                 <td>{icao24}</td>
                 <td>{callsign}</td>
                 <td>

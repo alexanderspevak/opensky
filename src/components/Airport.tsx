@@ -22,10 +22,7 @@ const Airport = ({
     storedDirection
   );
   const [callsign, setCallsign] = useState<string>('');
-  const { getData, data, errorMessage, loading } = useOpenSky(
-    storedDirection,
-    day
-  );
+  const { getData, data, errorMessage, loading } = useOpenSky(direction, day);
 
   useEffect(() => {
     const timerId = setTimeout(() => {
